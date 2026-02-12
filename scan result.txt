@@ -1,0 +1,41 @@
+(bapu㉿bapu)-[~]
+└─$ ifconfig
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:0a:70:cb:02  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 9 overruns 0  carrier 0  collisions 0
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.195.131  netmask 255.255.255.0  broadcast 192.168.195.255
+        inet6 fe80::20c:29ff:fe39:f50d  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:39:f5:0d  txqueuelen 1000  (Ethernet)
+        RX packets 21  bytes 2540 (2.4 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 56  bytes 8031 (7.8 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 23  bytes 2018 (1.9 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 23  bytes 2018 (1.9 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+                                                                                
+┌──(bapu㉿bapu)-[~]
+└─$ nmap -sS 192.168.195.131 -oN scan_results.txt
+
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-02-12 01:39 EST
+Nmap scan report for 192.168.195.131
+Host is up (0.000055s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap done: 1 IP address (1 host up) scanned in 0.50 seconds
+                                                              
